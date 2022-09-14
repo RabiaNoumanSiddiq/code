@@ -15,9 +15,11 @@ defmodule GraphCommons.Utils do
   defmacro graph_service(graph_module) do
     quote do
       # unimport any existing graph modules
+      import DGraph, only: []
       import NativeGraph, only: []
       import PropertyGraph, only: []
       import RDFGraph, only: []
+      import TinkerGraph, only: []
       # import graph module argument
       import unquote(graph_module)
     end

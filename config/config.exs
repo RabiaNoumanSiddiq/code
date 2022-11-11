@@ -52,6 +52,14 @@ config :rdf_graph,
     }
   }
 
+config :gremlex,
+  host: "127.0.0.1",
+  port: 8182,
+  path: "/gremlin",
+  pool_size: 10,
+  secure: false,
+  ping_delay: 90_000
+
 
 # For loading per app config files
 # for config <- "apps/*/config/config.exs" |> Path.expand() |> Path.wildcard() do

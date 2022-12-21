@@ -34,7 +34,10 @@ defmodule DGraph.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:dlex, "~> 0.5.0"}
-     ]
+        {:dlex, "== 0.5.0"},
+        # {:db_connection, "== 2.1.0"},
+        # {:grpc, "== 0.3.1"},
+        {:protobuf, "== 0.9.0"}
+    ]
   end
 end

@@ -1,40 +1,31 @@
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
 
 <https://pragprog.com/>
-    dc:identifier "pragmatic" ;
-    dc:iri "https://pragprog.com/"^^xsd:anyURI ;
-    dc:relation <urn:isbn:978-1-68050-252-7> ;
-    dc:title "The Pragmatic Bookshelf" ;
-    a foaf:Organization .
+    a schema:Organization ;
+    schema:identifier "pragmatic" ;
+    schema:name "The Pragmatic Bookshelf" .
+
+<https://pragprog.com/titles/tvmelixir/adopting-elixir/>
+    a schema:Book ;
+    schema:author <https://twitter.com/bgmarx>, <https://twitter.com/josevalim>, <https://twitter.com/redrapids> ;
+    schema:bookFormat "Paperback" ;
+    schema:datePublished "2018-03-14" ;
+    schema:identifier "adopting_elixir" ;
+    schema:isbn "978-1-68050-252-7" ;
+    schema:name "Adopting Elixir" ;
+    schema:publisher <https://pragprog.com/> .
 
 <https://twitter.com/bgmarx>
-    dc:identifier "ben_marx" ;
-    dc:iri "https://twitter.com/bgmarx"^^xsd:anyURI ;
-    dc:title "Ben Marx" ;
-    a foaf:Person .
+    a schema:Person ;
+    schema:identifier "ben_marx" ;
+    schema:name "Ben Marx" .
 
 <https://twitter.com/josevalim>
-    dc:identifier "jose_valim" ;
-    dc:iri "https://twitter.com/josevalim"^^xsd:anyURI ;
-    dc:title "José Valim" ;
-    a foaf:Person .
+    a schema:Person ;
+    schema:identifier "jose_valim" ;
+    schema:name "José Valim" .
 
 <https://twitter.com/redrapids>
-    dc:identifier "bruce_tate" ;
-    dc:iri "https://twitter.com/redrapids"^^xsd:anyURI ;
-    dc:title "Bruce Tate" ;
-    a foaf:Person .
-
-<urn:isbn:978-1-68050-252-7>
-    dc:identifier "ben_marx" ;
-    dc:iri "urn:isbn:978-1-68050-252-7"^^xsd:anyURI ;
-    dc:creator <https://twitter.com/bgmarx>, <https://twitter.com/josevalim>, <https://twitter.com/redrapids> ;
-    dc:date "2018-03-14"^^xsd:date ;
-    dc:format "Paper" ;
-    dc:publisher <https://pragprog.com/> ;
-    dc:title "Adopting Elixir"@en ;
-    a bibo:Book .
+    a schema:Person ;
+    schema:identifier "bruce_tate" ;
+    schema:name "Bruce Tate" .
